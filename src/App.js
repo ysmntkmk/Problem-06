@@ -1,3 +1,5 @@
+
+
 // Her bir butonun üzerine, içerikte yazan eyleme karşılık gelen satır içi/inline stiller ekleyin.
 // Örneğin "Create" butonuna yeşil bir arka plan, "Update" butonuna turuncu bir arka plan, ve "Delete" butonuna kırmızı bir arka plan ekleyin.
 // public klasöründe bulunan preview.png görselini inceleyin. Tasarımın beklenen halini göreceksiniz.
@@ -5,21 +7,26 @@
 
 export default function ButtonVariants() {
   return (
-    <span className="wrapper">
-      {/* Create butonu */}
-      <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 focus:outline-none transition duration-300">
-        Create
-      </button>
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="flex flex-col justify-center items-center space-y-4 w-[300px]">
+        {/* Create, Update, Delete Butonları Yan Yana */}
+        <div className="flex justify-between w-full space-x-4">
+          <button className="bg-green-500 rounded-[10px] text-white p-4 hover:bg-white hover:text-green-500 hover:border-2 hover:border-green-600 transition duration-300 w-full">
+            Create
+          </button>
+          <button className="bg-orange-500 rounded-[10px] text-white p-4 hover:bg-white hover:text-orange-500 hover:border-2 hover:border-orange-400 transition duration-300 w-full">
+            Update
+          </button>
+          <button className="bg-red-500 rounded-[10px] text-white p-4 hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-600 transition duration-300 w-full">
+            Delete
+          </button>
+        </div>
 
-      {/* Update butonu */}
-      <button className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-700 focus:outline-none transition duration-300">
-        Update
-      </button>
-
-      {/* Delete butonu */}
-      <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 focus:outline-none transition duration-300">
-        Delete
-      </button>
-    </span>
+        {/* Testing Butonu */}
+        <button className="bg-sky-500 rounded-[10px] text-white px-4 py-2 w-full hover:bg-white hover:text-sky-500 hover:border-2 hover:border-blue-300 transition duration-300">
+          Testing Tailwind
+        </button>
+      </div>
+    </div>
   );
 }
